@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"8EXaa":[function(require,module,exports) {
+})({"9Ffao":[function(require,module,exports) {
 "use strict";
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "c2a4860653390864";
+module.bundle.HMR_BUNDLE_ID = "2fdb2a1fc0762cfc";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, importScripts */ /*::
 import type {
   HMRAsset,
@@ -502,78 +502,8 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"6XVkV":[function(require,module,exports) {
-const galleryItems = [
-    {
-        preview: "https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820__480.jpg",
-        original: "https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820_1280.jpg",
-        description: "Hokkaido Flower"
-    },
-    {
-        preview: "https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677__340.jpg",
-        original: "https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677_1280.jpg",
-        description: "Container Haulage Freight"
-    },
-    {
-        preview: "https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785__340.jpg",
-        original: "https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785_1280.jpg",
-        description: "Aerial Beach View"
-    },
-    {
-        preview: "https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619__340.jpg",
-        original: "https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619_1280.jpg",
-        description: "Flower Blooms"
-    },
-    {
-        preview: "https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334__340.jpg",
-        original: "https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334_1280.jpg",
-        description: "Alpine Mountains"
-    },
-    {
-        preview: "https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571__340.jpg",
-        original: "https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571_1280.jpg",
-        description: "Mountain Lake Sailing"
-    },
-    {
-        preview: "https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272__340.jpg",
-        original: "https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg",
-        description: "Alpine Spring Meadows"
-    },
-    {
-        preview: "https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255__340.jpg",
-        original: "https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255_1280.jpg",
-        description: "Nature Landscape"
-    },
-    {
-        preview: "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843__340.jpg",
-        original: "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
-        description: "Lighthouse Coast Sea"
-    }, 
-];
-const galleryList = document.querySelector(".gallery");
-const createGalleryItem = ({ preview , original , description  })=>{
-    return `
-    <li class="gallery__item">
-      <a class="gallery__link" href="javascript:void(0)">
-        <img class="gallery__image" src="${preview}" data-source="${original}" alt="${description}">
-      </a>
-    </li>
-  `;
-};
-const renderGallery = (galleryItems1)=>{
-    galleryList.innerHTML = galleryItems1.map(createGalleryItem).join("");
-};
-renderGallery(galleryItems);
-galleryList.addEventListener("click", (event)=>{
-    event.preventDefault();
-    if (event.target.classList.contains("gallery__image")) {
-        const instance = basicLightbox.create(`
-      <img src="${event.target.dataset.source}" width="800" height="600">
-    `);
-        instance.show();
-    }
-});
+},{}],"dUrpa":[function(require,module,exports) {
 
-},{}]},["8EXaa","6XVkV"], "6XVkV", "parcelRequired7c6")
+},{}]},["9Ffao","dUrpa"], "dUrpa", "parcelRequired7c6")
 
-//# sourceMappingURL=01-gallery.53390864.js.map
+//# sourceMappingURL=01-gallery.c0762cfc.js.map
