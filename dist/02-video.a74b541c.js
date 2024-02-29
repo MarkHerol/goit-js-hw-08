@@ -503,6 +503,15 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"fFZ34":[function(require,module,exports) {
+player.on("timeupdate", handleTimeUpdate);
+function handleTimeUpdate(data) {
+    const currentTime = data.seconds;
+    savePlaybackTime(currentTime);
+}
+function savePlaybackTime(time) {
+    localStorage.setItem("videoplayer-current-time", time);
+}
+player.on("timeupdate", _.throttle(handleTimeUpdate, 1000));
 
 },{}]},["5rKFT","fFZ34"], "fFZ34", "parcelRequired7c6")
 
