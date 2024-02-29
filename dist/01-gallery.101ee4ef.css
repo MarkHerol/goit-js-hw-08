@@ -16,4 +16,14 @@ img {
   display: block;
 }
 
+input {
+  font: inherit;
+  padding: 8px;
+}
+
+button {
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
 /*# sourceMappingURL=01-gallery.101ee4ef.css.map */

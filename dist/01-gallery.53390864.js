@@ -548,30 +548,24 @@ const galleryItems = [
         preview: "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843__340.jpg",
         original: "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
         description: "Lighthouse Coast Sea"
-    }, 
+    }
 ];
 const galleryList = document.querySelector(".gallery");
-const createGalleryItem = ({ preview , original , description  })=>{
+function createGalleryItem(item) {
     return `
-    <li class="gallery__item">
-      <a class="gallery__link" href="javascript:void(0)">
-        <img class="gallery__image" src="${preview}" data-source="${original}" alt="${description}">
-      </a>
-    </li>
-  `;
-};
-const renderGallery = (galleryItems1)=>{
-    galleryList.innerHTML = galleryItems1.map(createGalleryItem).join("");
-};
-renderGallery(galleryItems);
-galleryList.addEventListener("click", (event)=>{
-    event.preventDefault();
-    if (event.target.classList.contains("gallery__image")) {
-        const instance = basicLightbox.create(`
-      <img src="${event.target.dataset.source}" width="800" height="600">
-    `);
-        instance.show();
-    }
+      <li class="gallery__item">
+        <a class="gallery__link" href="${item.original}">
+          <img class="gallery__image" src="${item.preview}" alt="${item.description}" />
+        </a>
+      </li>
+    `;
+}
+const galleryMarkup = galleryItems.map(createGalleryItem).join("");
+galleryList.insertAdjacentHTML("beforeend", galleryMarkup);
+const lightbox = new SimpleLightbox(".gallery a", {
+    captionsData: "alt",
+    captionDelay: 250,
+    captionPosition: "bottom"
 });
 
 },{}]},["8EXaa","6XVkV"], "6XVkV", "parcelRequired7c6")
